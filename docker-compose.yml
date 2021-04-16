@@ -20,6 +20,7 @@ services:
       - "8000:80"
     restart: always
     volumes:
+      - ./mu-plugins:/var/www/html/wp-content/mu-plugins
       - ./upload.ini:/usr/local/etc/php/conf.d/uploads.ini
     environment:
       WORDPRESS_DB_HOST: db:3306
