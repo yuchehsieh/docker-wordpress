@@ -25,6 +25,21 @@ services:
     
     ...
 
+  frontend: 
+    build:
+      context: . 
+      (「內容」設定為專案根目錄底下全部)
+      dockerfile: ./Dockerfile
+      (找「內容」底下的 ./Dockerfile)
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - ./src:/app/src
+      (映射本地 src 到 docker 的 src)
+      - ./public:/app/public 
+       (映射本地 public 到 docker 的 public)
+
 volumes:
     ...
 ```
@@ -41,3 +56,17 @@ volumes:
 > A.:  http://localhost:8000/index.php?rest_route=/dtd/v1/projects
 
 > B: http://localhost:8000/index.php?rest_route=/wp/v2/project
+
+ㄋ
+
+## 修改前端檔案自動更新(Hot Reload 要手動設定!)
+
+1. package.json 修正
+(參考資料: https://github.com/facebook/create-react-app/issues/1049)
+
+```
+"scripts": {
+    "start": "CHOKIDAR_USEPOLLING=true craco start",
+    ---
+},
+```

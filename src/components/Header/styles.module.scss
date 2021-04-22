@@ -1,0 +1,11 @@
+@import '../../styles/color.scss';
+
+.container {
+  height: 10vh;
+  background-color: $dtd-background;
+  display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  align-items: center;
+  justify-content: flex-start;
+}

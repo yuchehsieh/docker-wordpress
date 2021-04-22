@@ -38,5 +38,16 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: password
 
+  frontend: 
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+
 volumes:
   db_data: {}
