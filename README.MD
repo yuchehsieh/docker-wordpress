@@ -57,8 +57,6 @@ volumes:
 
 > B: http://localhost:8000/index.php?rest_route=/wp/v2/project
 
-ㄋ
-
 ## 修改前端檔案自動更新(Hot Reload 要手動設定!)
 
 1. package.json 修正
