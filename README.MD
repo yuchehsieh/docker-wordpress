@@ -62,7 +62,8 @@ volumes:
 ## 修改前端檔案自動更新(Hot Reload 要手動設定!)
 
 1. package.json 修正
-(參考資料: https://github.com/facebook/create-react-app/issues/1049)
+(參考資料1: https://github.com/facebook/create-react-app/issues/1049)
+(參考資料2: https://stackoverflow.com/questions/44643045/running-development-server-with-create-react-app-inside-of-a-docker-container)
 
 ```
 "scripts": {
