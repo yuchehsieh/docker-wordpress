@@ -1,4 +1,4 @@
 export default {
-  home: '/',
+  home: '/home',
   announcements: '/announcements',
 };
