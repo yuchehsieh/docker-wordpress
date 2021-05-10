@@ -38,11 +38,9 @@ const Home = () => {
             <div
               className={styles.posts_post}
               // to={`${path.announcements}/${post?.id}`}
-              key={post?.id}
+              key={post?.title}
             >
-              <p onClick={() => onPostClick(post?.id)}>
-                {post?.title?.rendered}1234
-              </p>
+              <p onClick={() => onPostClick(post?.id)}>{post?.title}1234</p>
               <sub>{DateFormatter(post?.date)}</sub>
               <div
                 style={{
