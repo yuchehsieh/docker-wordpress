@@ -9,7 +9,8 @@ export const getAnnouncements = async (dispatch) => {
   // https://docker-wordpress-murphyhsieh.netlify.app/home
 
   // const url = `${BASE_URL}/posts?categories=31&_fields=id, title, category, date&per_page=${perPage}&page=${page}`;
-  const url = 'https://docker-wordpress-murphyhsieh.netlify.app/api/wp-json/dtd/v1/staff'; // testing url
+  const url =
+    'https://docker-wordpress-murphyhsieh.netlify.app/api/wp-json/dtd/v1/staff'; // testing url
   const response = await axios.get(url);
   const announcements = response.data;
 
