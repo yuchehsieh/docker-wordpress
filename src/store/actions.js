@@ -6,11 +6,8 @@ const BASE_URL = 'https://dtd.ntue.edu.tw/wp-json/wp/v2';
 export const getAnnouncements = async (dispatch) => {
   // const { perPage = 5, page = 1 } = options;
 
-  // https://docker-wordpress-murphyhsieh.netlify.app/home
-
   // const url = `${BASE_URL}/posts?categories=31&_fields=id, title, category, date&per_page=${perPage}&page=${page}`;
-  const url =
-    'https://docker-wordpress-murphyhsieh.netlify.app/api/wp-json/dtd/v1/staff'; // testing url
+  const url = 'http://dtd.ntue.edu.tw:8080/wp-json/dtd/v1/staff'; // testing url
   const response = await axios.get(url);
   const announcements = response.data;
 
