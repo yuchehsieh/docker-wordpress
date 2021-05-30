@@ -1,5 +1,6 @@
 {
   "name": "react-eslint-stylelint",
+  "homepage": "http://docker-wordpress.surge.sh/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
