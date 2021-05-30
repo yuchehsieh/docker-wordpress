@@ -29,16 +29,14 @@ jobs:
         with:
           node-version: 12
       
-      - name: Github Action for Yarn
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install
-
-      - name: Creating Build
-        run: CI=false yarn build 
+      - name: Installing dependencies
+        run: npm install
         
       - name: Installing surge
         run: npm install -g surge
-               
+        
+      - name: Creating Build
+        run: npm run build && cp build/index.html build/200.html
+        
       - name: deploying using surge
         run: surge ./build http://docker-wordpress.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
